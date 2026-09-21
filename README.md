@@ -1,6 +1,3 @@
-> [!IMPORTANT]  
-> Currently being implemented.
-
 # Architecture
 
 ## Description
