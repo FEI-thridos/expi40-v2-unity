@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.BasyxClient</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.BasyxClient.BasyxClient">
+            <summary>
+            Implementation of IBasyxClient interface for preparing a ProductionLineModel based on an AAS structure retrieved from a BaSyx AAS server.
+            </summary>
+        </member>
+        <member name="F:Expi40.BasyxClient.BasyxClient._controllerInterfaceRequiredSemanticIds">
+            <summary>
+            List of required semantic IDs for each supported controller interface SemanticId.
+            </summary>
+        </member>
+        <member name="F:Expi40.BasyxClient.BasyxClient._requiredSubmodelsSemanticIds">
+            <summary>
+            Collection of required Submodel SemanticIds for each AAS of ProductionLine.
+            </summary>
+        </member>
+        <member name="P:Expi40.BasyxClient.BasyxClient.IsProductionLineModelPrepared">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.#ctor(System.Net.Http.IHttpClientFactory)">
+            <summary>
+            Initializes a new instance of the BasyxClient class and sets up required submodel semantic IDs for various
+            asset types.
+            </summary>
+            <param name="httpClientFactory">The factory used to create HTTP client instances.</param>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.GetProductionLineModel">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.PrepareProductionLineModel(System.String,System.String,Expi40.Core.Unity.ApplicationInstance,Expi40.Core.Unity.BuildTargetType)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.GetAllShells">
+            <summary>
+            Retrieves all Asset Administration Shells from the specified AAS service URL.
+            </summary>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.PrepareAllSubmodels(System.String)">
+            <summary>
+            Loads and assigns all referenced submodels for the provided Asset Administration Shells from the specified
+            AAS URL.
+            </summary>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.SetupProductionLineModel(Expi40.BasyxClient.Dtos.AssetAdministrationShellDto)">
+            <summary>
+            Creates a ProductionLineModel instance from the provided AssetAdministrationShellDto after verifying
+            required submodels.
+            </summary>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.SetupControllerModel(Expi40.BasyxClient.Dtos.AssetAdministrationShellDto)">
+            <summary>
+            Constructs and configures a ControllerModel instance based on the provided production line shell, available
+            shells, and application instance, including mandatory and control affordances for each asset interface.
+            </summary>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.ProcessLineProducts(System.Int32,Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix,Expi40.Core.Models.Basyx.Aas.ControllerModel,Expi40.BasyxClient.Dtos.SubmodelElementDtos.SubmodelElementCollectionDto)">
+            <summary>
+            Processes products and their parts within a production line structure, applying transformation matrices and
+            handling nested product collections recursively.
+            </summary>
+        </member>
+        <member name="M:Expi40.BasyxClient.BasyxClient.SetupLinePartModel(Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix,Expi40.Core.Models.Basyx.Aas.ControllerModel,Expi40.BasyxClient.Dtos.SubmodelElementDtos.SubmodelElementCollectionDto)">
+            <summary>
+            Configures and adds a LinePartModel to the specified ProductionLineModel using data from the provided
+            SubmodelElementCollectionDto and related AssetAdministrationShellDto instances.
+            </summary>
+        </member>
+    </members>
+</doc>

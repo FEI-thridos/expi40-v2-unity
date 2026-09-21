@@ -1,0 +1,2010 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.Core.AasSemantics.QualifierSemantics">
+            <summary>
+            Semantic IDs for Qualifiers used within AAS.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.QualifierSemantics.Expi40Instance">
+            <summary>
+            SemanticId of Expi40Instance Qualifier Type (equivalent to IdShort)
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.AasSemantics.SemanticsBase">
+            <summary>
+            Provides a base class containing common constants for semantics operations.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SemanticsBase.BaseExpi40Url">
+            <summary>
+            Specifies the base URL for semantics used within the Expi40 project.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.AasSemantics.SubmodelElementSemantics">
+            <summary>
+            Semantic IDs for Submodel Elements used within AAS.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.IsOnlyVirtualProperty">
+            <summary>
+            SemanticId describing whether a part of the production line structure is only virtual,
+            meaning that it has no physical counterpart in the production line.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.IsSensorProperty">
+            <summary>
+            SemanticId describing whether a part of the production line structure is a sensor,
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.PluginsProperty">
+            <summary>
+            SemanticId describing whether a part of the production line structure has a control plugin assigned,
+            meaning that it can perform actions or manipulate the environment.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.AdditionalProperties">
+            <summary>
+            SemanticId describing collection of additional properties of a part of the production line structure,
+            which are not explicitly defined in the AAS but can be relevant for the digital twin in Unity.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.CommunicationPairs">
+            <summary>
+            SemanticId describing collection of communication pairs of a part of the production line structure,
+            which define the interactions between different parts of the virtual and physical production line.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.CommunicationPairProperty">
+            <summary>
+            SemanticId defining property from AAS.OperationalData to which pair corresponds to
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaClientServerInterface">
+            <summary>
+            SemanticId of the OPC UA Client-Server Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaClientServerInterfaceProperties">
+            <summary>
+            SemanticId of the properties of the OPC UA Client-Server Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaClientServerInterfacePropertiesNewPhysicalProduct">
+            <summary>
+            SemanticId of the property describing the new virtual product client in the OPC UA Client-Server Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterface">
+            <summary>
+            SemanticId of the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceActions">
+            <summary>
+            SemanticId of the actions of the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceActionsNewVirtualProductClient">
+            <summary>
+            SemanticId of the action describing the new virtual product client in the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceActionsNewVirtualProductServer">
+            <summary>
+            SemanticId of the action describing the new virtual product server in the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceEvents">
+            <summary>
+            SemanticId of the events of the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceEventsNewPhysicalProduct">
+            <summary>
+            SemanticId of the event describing the new physical product in the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceEventsNewVirtualProductClient">
+            <summary>
+            SemanticId of the event describing the new virtual product client in the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.OpcUaPubSubInterfaceEventsNewVirtualProductServer">
+            <summary>
+            SemanticId of the event describing the new virtual product server in the OPC UA Pub-Sub Interface Description.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.ControllerAasReference">
+            <summary>
+            SemanticId describing the reference to the AAS of the controller.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.TransformationMatrix">
+            <summary>
+            SemanticId of the transformation matrix property, which describes the transformation between the coordinate systems of a physical and a virtual product.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Products">
+            <summary>
+            SemanticId describing sub-products of production line structure.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Parts">
+            <summary>
+            SemanticId describing part of production line structure.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.LinePartAasReference">
+            <summary>
+            SemanticId describing the reference to the AAS of a part in the production line structure.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rxx">
+            <summary>
+            SemanticId describing the rxx element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rxy">
+            <summary>
+            SemanticId describing the rxy element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rxz">
+            <summary>
+            SemanticId describing the rxz element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Ryx">
+            <summary>
+            SemanticId describing the ryx element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Ryy">
+            <summary>
+            SemanticId describing the ryy element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Ryz">
+            <summary>
+            SemanticId describing the ryz element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rzx">
+            <summary>
+            SemanticId describing the rzx element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rzy">
+            <summary>
+            SemanticId describing the rzy element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Rzz">
+            <summary>
+            SemanticId describing the rzz element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Tx">
+            <summary>
+            SemanticId describing the tx element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Ty">
+            <summary>
+            SemanticId describing the ty element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelElementSemantics.Tz">
+            <summary>
+            SemanticId describing the tz element of the transformation matrix.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.AasSemantics.SubmodelSemantics">
+            <summary>
+            Semantic IDs for Submodels used within AAS.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.ControllerSm">
+            <summary>
+            SemanticId of the Controller SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.LineStructureSm">
+            <summary>
+            SemanticId of the Line Structure SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.ServicesSm">
+            <summary>
+            SemanticId of the Services SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.AssetInterfacesDescriptionSm">
+            <summary>
+            SemanticId of the Asset Interfaces Description SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.OperationalDataSm">
+            <summary>
+            SemanticId of the Operational Data SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.UnityDataSm">
+            <summary>
+            SemanticId of the Unity Data SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.TimeSeriesSm">
+            <summary>
+            SemanticId of the Time Series SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.Models3DSm">
+            <summary>
+            SemanticId of the 3D Models SM.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.AasSemantics.SubmodelSemantics.HandoverDocumentationSm">
+            <summary>
+            SemanticId of the Handover Documentation SM.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.BasyxClient.IBasyxClient">
+            <summary>
+            Defines the contract for a client that connects to an Asset Administration Shell (AAS) server, retrieves and prepares a production line model,
+            and provides access to the prepared model.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.BasyxClient.IBasyxClient.IsProductionLineModelPrepared">
+            <summary>
+            Indicates whether the production line model has been initialized.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.BasyxClient.IBasyxClient.GetProductionLineModel">
+            <summary>
+            Retrieves the prepared production line model.
+            </summary>
+            <returns>The prepared ProductionLineModel instance.</returns>
+            <exception cref="T:Expi40.Core.Exceptions.BasyxClient.ProductionLineModelNotPreparedException">Thrown if the production line model has not been prepared.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.BasyxClient.IBasyxClient.PrepareProductionLineModel(System.String,System.String,Expi40.Core.Unity.ApplicationInstance,Expi40.Core.Unity.BuildTargetType)">
+            <summary>
+            Initializes and prepares the production line model by retrieving shells and submodels from the AAS server,
+            setting up controller and line part models, and processing products.
+            </summary>
+            <param name="aasUrl">The URL of the Asset Administration Shell (AAS) server.</param>
+            <param name="productionLineShortId">The short ID of the production line to be prepared.</param>
+            <param name="instance">The application instance used for model preparation.</param>
+            <param name="buildTarget">The build target type for the production line model.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if 'aasUrl' or 'productionLineShortId' is null or empty.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the production line shell with the specified short ID is not found in the AAS server.</exception>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaClient.ClientCertificateCheckerCode">
+            <summary>
+            Specifies the result codes returned by Expi40.OpcUaClient.ClientCertificateChecker.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.CommunicationInterfaces.OpcUaClient.ClientCertificateCheckerCode.Success">
+            <summary>
+            Indicates that the operation completed successfully.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.CommunicationInterfaces.OpcUaClient.ClientCertificateCheckerCode.CertificateCreationFailed">
+            <summary>
+            Indicates that the certificate creation process failed.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.CommunicationInterfaces.OpcUaClient.ClientCertificateCheckerCode.InvalidNumberOfArguments">
+            <summary>
+            Indicates that the number of provided arguments is invalid.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.CommunicationInterfaces.OpcUaClient.ClientCertificateCheckerCode.UnexpectedException">
+            <summary>
+            Indicates that an unexpected exception has occurred.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes">
+            <summary>
+            Represents the set of attributes required to establish a connection to an OPC UA server.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.OpcUaServerEndpoint">
+            <summary>
+            Endpoint URL of the OPC UA server.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.ApplicationName">
+            <summary>
+            Name of client application.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.ClientConfigPath">
+            <summary>
+            Path to the client configuration file.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.Username">
+            <summary>
+            Username associated with the user account.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.Password">
+            <summary>
+            Password used for authentication.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.ClientCertificateCheckerPath">
+            <summary>
+            Path to the client certificate checker executable.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ConnectionAttributes class with the specified OPC UA server endpoint,
+            application name, client configuration path, user credentials and client certificate checker path.
+            </summary>
+            <param name="opcUaServerEndpoint">The endpoint URL of the OPC UA server to connect to. Cannot be null or empty.</param>
+            <param name="applicationName">The name of the client application used for identification when connecting to the OPC UA server. Cannot be null or empty.</param>
+            <param name="clientConfigPath">The file path to the client configuration settings. Must be a valid path to an existing configuration file. Cannot be null or empty.</param>
+            <param name="username">The username used for authenticating with the OPC UA server. Cannot be null or empty.</param>
+            <param name="password">The password associated with the specified username. Cannot be null or empty.</param>
+            <param name="clientCertificateCheckerPath">The path to the client certificate checker executable. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if any of the parameters are null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient">
+            <summary>
+            Defines the contract for a client that connects to and interacts with an OPC UA server, enabling connection
+            management, node subscription, and value writing operations.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.IsConnected">
+            <summary>
+            Gets a value indicating whether the current session is connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.Connect(Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes)">
+            <summary>
+            Establishes a connection using the specified connection attributes.
+            </summary>
+            <param name="connectionAttributes">The attributes that define the parameters for the connection. Cannot be null.</param>
+            <returns>A task that represents the asynchronous connect operation.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="connectionAttributes"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.Disconnect">
+            <summary>
+            Asynchronously disconnects from the remote service or resource.
+            </summary>
+            <returns>A task that represents the asynchronous disconnect operation.</returns>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.SubscribeNewPhysicalProductMonitor(System.String)">
+            <summary>
+            Subscribes to monitoring events for a new physical product defined in Controller AAS - AssetInterfacesDescription SM / OpcUaClientServerInterface - Properties
+            - property described with SemanticId: https://cd.expi40.duckdns.org/controller/opc-ua-client-server-interface/properties/new-physical-product
+            </summary>
+            <param name="nodeId">The unique identifier of the node for which to start monitoring physical product events. Cannot be null or
+            empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="nodeId"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.SubscribeNode(System.String,System.String,System.String)">
+            <summary>
+            Subscribes to updates from the specified node.
+            </summary>
+            <param name="nodeId">The unique identifier of the node to subscribe to. Cannot be null or empty.</param>
+            <param name="gameObjectName">The name of the game object associated with the node. Cannot be null or empty.</param>
+            <param name="controlPropertyName">The name of the control property to update. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="nodeId"/>, <paramref name="gameObjectName"/>, or <paramref name="controlPropertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.ApplySubscriptions">
+            <summary>
+            Applies all configured subscriptions asynchronously.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient.WriteValue(System.String,System.Object)">
+            <summary>
+            Writes the specified value to the node identified by the given node ID.
+            </summary>
+            <param name="nodeId">The unique identifier of the node to which the value will be written. Cannot be null or empty.</param>
+            <param name="value">The value to write to the specified node. The type and format must be compatible with the node's data type. Cannot be null.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="nodeId"/> is null or empty.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is null.</exception>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes">
+            <summary>
+            Represents the set of attributes required to establish a connection to MQTT broker.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.BrokerAddress">
+            <summary>
+            Address of the message broker used for communication, e.g. URL or valid IP address.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.BrokerPort">
+            <summary>
+            Network port number used to connect to the message broker.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.ClientId">
+            <summary>
+            Unique identifier for the client connecting to the message broker.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.Username">
+            <summary>
+            Username used for authenticating with the message broker.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.Password">
+            <summary>
+            Password used for authenticating with the message broker.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes.#ctor(System.String,System.Int32,System.Guid,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ConnectionAttributes class with the specified broker address, port, client
+            identifier, and authentication credentials.
+            </summary>
+            <param name="brokerAddress">The network address of the broker to connect to. Cannot be null or empty.</param>
+            <param name="brokerPort">The port number on which the broker is listening. Must be a valid TCP port number between 1 and 65535.</param>
+            <param name="clientId">The unique identifier for the client connection. This value is used to distinguish the client from others. Cannot be Guid.Empty.</param>
+            <param name="username">The username used for authenticating with the broker. Cannot be null or empty.</param>
+            <param name="password">The password used for authenticating with the broker. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if any of the parameters are null or empty, or <paramref name="clientId"/> is an empty GUID..</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="brokerPort"/> is not between 1 and 65535.</exception>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher">
+            <summary>
+            Defines the contract for a publisher that manages MQTT connections and publishes OPC UA structured messages
+            to specified topics.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.IsConfigured">
+            <summary>
+            Gets a value indicating whether the object has been configured with the required settings.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.IsConnected">
+            <summary>
+            Gets a value indicating whether the connection to the MQTT broker is currently established.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.CreatePublisherConfiguration(Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes)">
+            <summary>
+            Creates a new publisher configuration using the specified connection attributes.
+            </summary>
+            <param name="connectionAttributes">The connection attributes to use when creating the publisher configuration. Cannot be null.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.RegisterPublishedProperty(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Registers property from Controller AAS - AssetInterfacesDescription SM / OpcUaPubSubInterface - Actions to be published under the specified topic.
+            DataType and InitialValue are taken from the corresponding communication pair - OperationalData SM property.
+            </summary>
+            <param name="topic">The topic under which the property will be published. Cannot be null or empty.</param>
+            <param name="propertyName">The name of the property to register. Consists of "{PartParentName}.{ControlPropertyName}". Cannot be null or empty.</param>
+            <param name="aasDataType">The AAS data type of the property as a string. This value determines how the property is interpreted by
+            consumers. Cannot be null or empty.</param>
+            <param name="initialValue">The initial value to assign to the property. The value should be compatible with the specified data type. Cannot be null.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="topic"/> or <paramref name="propertyName"/> or <paramref name="aasDataType"/> is null or empty.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="initialValue"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.RegisterNewVirtualProductInstantiatedPublishedProperty(System.String,System.String)">
+            <summary>
+            Registers published data item and sets JSON property name which is published in PublishedDataSet when new virtual product is instantiated.
+            The name is taken from property defined in Controller AAS - AssetInterfacesDescription SM / OpcUaPubSubInterface - Actions - action described with SemanticId:
+            https://cd.expi40.duckdns.org/controller/opc-ua-pub-sub-interface/actions/new-virtual-product-server
+            </summary>
+            <remarks>Used in SERVER Unity application.</remarks>
+            <param name="topic">The topic under which the property will be published. Cannot be null or empty.</param>
+            <param name="propertyName">Name of the property to set. Consists of "{PartParentName}.{ControlPropertyName}". Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="topic"/> or <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.RegisterInstantiateNewVirtualProductRequestPublishedProperty(System.String,System.String)">
+            <summary>
+            Registers published data item and sets JSON property name which is published in PublishedDataSet when new virtual product is requested.
+            The name is taken from property defined Controller AAS - in AssetInterfacesDescription SM / OpcUaPubSubInterface - Actions - action described with SemanticId:
+            https://cd.expi40.duckdns.org/controller/opc-ua-pub-sub-interface/actions/new-virtual-product-client
+            </summary>
+            <remarks>Used in CLIENT Unity application.</remarks>
+            <param name="topic">The topic under which the property will be published. Cannot be null or empty.</param>
+            <param name="propertyName">Name of the property to set. Consists of "{PartParentName}.{ControlPropertyName}". Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="topic"/> or <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.Connect">
+            <summary>
+            Establishes a connection to the MQTT broker using the configured settings.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.Disconnect">
+            <summary>
+            Terminates the current connection and releases any associated resources.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.WritePublishedDataItem(System.String,System.Object)">
+            <summary>
+            Writes a published data item with the specified name of property (JSON message property name) and value.
+            </summary>
+            <param name="jsonMessagePropertyName">The name of the registered property. Consists of "{PartParentName}.{ControlPropertyName}". Cannot be null or empty.</param>
+            <param name="value">The value to assign to the data item. May be null if the data item supports null values. Cannot be null.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="jsonMessagePropertyName"/> is null or empty.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.WriteNewVirtualProductInstantiated">
+            <summary>
+            Used to call <see cref="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.WritePublishedDataItem(System.String,System.Object)"/> using previously provided property name
+            via <see cref="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.RegisterNewVirtualProductInstantiatedPublishedProperty(System.String,System.String)"/>.
+            </summary>
+            <remarks>Used in SERVER Unity application.</remarks>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.WriteInstantiateNewVirtualProductRequest">
+            <summary>
+            Used to call <see cref="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.WritePublishedDataItem(System.String,System.Object)"/> using previously provided property name
+            via <see cref="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher.RegisterInstantiateNewVirtualProductRequestPublishedProperty(System.String,System.String)"/>.
+            </summary>
+            <remarks>Used in CLIENT Unity application.</remarks>
+        </member>
+        <member name="T:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber">
+            <summary>
+            Defines the contract for an MQTT subscriber and topic event messages handling.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.IsConnected">
+            <summary>
+            Indicates whether the subscriber is currently connected to the MQTT broker.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.Connect(Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes)">
+            <summary>
+            Asynchronously establishes a connection with MQTT broker using the specified connection attributes.
+            </summary>
+            <param name="connectionAttributes">The attributes to use when establishing the connection. Cannot be null.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.Disconnect">
+            <summary>
+            Asynchronously disconnects from the MQTT broker and releases any associated resources.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.SubscribeToPlcTopic(System.String,System.String,System.String,System.String)">
+            <summary>
+            Subscribes Unity CLIENT application to updates from a PLC topic: 'plc'.
+            </summary>
+            <param name="topic">The topic to subscribe to for specific PLC events. Cannot be null or empty.</param>
+            <param name="messageFilter">The filter used to extract specific data from the JSON payload. Cannot be null or empty.</param>
+            <param name="partParentName">Part's parent name = Unity GameObject associated with the monitored item. Cannot be null or empty.</param>
+            <param name="controlPropertyName">Name of the control property within the Part's parent to update. Cannot be null or empty.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.SubscribeToClientControlTopic(System.String,System.String,System.String,System.String)">
+            <summary>
+            Subscribes Unity SERVER application to a client control topic: 'client/control'.
+            </summary>
+            <param name="topic">The topic to subscribe to for client control events. Cannot be null or empty.</param>
+            <param name="messageFilter">The filter used to extract specific data from the JSON payload. Cannot be null or empty.</param>
+            <param name="partParentName">Part's parent name = Unity GameObject associated with the monitored item. Cannot be null or empty.</param>
+            <param name="controlPropertyName">Name of the control property within the Part's parent to update. Cannot be null or empty.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.SubscribeToNewPhysicalProductTopic(System.String,System.String)">
+            <summary>
+            Subscribes Unity CLIENT to a new physical product topic defined in Controller AAS - AssetInterfacesDescription SM / OpcUaPubSubInterface - Events
+            - event described with SemanticId: https://cd.expi40.duckdns.org/controller/opc-ua-pub-sub-interface/events/new-physical-product
+            </summary>
+            <param name="topic">The topic to subscribe to for new physical product events. Cannot be null or empty.</param>
+            <param name="messageFilter">The filter used to extract specific data from the JSON payload. Cannot be null or empty.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.SubscribeToNewVirtualProductInstantiatedTopic(System.String,System.String)">
+            <summary>
+            Subscribes Unity CLIENT application to a new virtual product was instantiated topic defined in Controller AAS - AssetInterfacesDescription SM / OpcUaPubSubInterface 
+            - Events - event described with SemanticId: https://cd.expi40.duckdns.org/controller/opc-ua-pub-sub-interface/events/new-virtual-product-client
+            </summary>
+            <param name="topic">The topic to subscribe to for new virtual product instantiation events. Cannot be null or empty.</param>
+            <param name="messageFilter">The filter used to extract specific data from the JSON payload. Cannot be null or empty.</param>
+        </member>
+        <member name="M:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber.SubscribeToInstantiateNewVirtualProductRequestTopic(System.String,System.String)">
+            <summary>
+            Subscribes Unity SERVER application to the request for instantiating new virtual product topic defined in Controller AAS - AssetInterfacesDescription SM / OpcUaPubSubInterface
+            - Events - event described with SemanticId: https://cd.expi40.duckdns.org/controller/opc-ua-pub-sub-interface/events/new-virtual-product-server
+            </summary>
+            <param name="topic">The topic to subscribe to for new virtual product instantiation request events. Cannot be null or empty.</param>
+            <param name="messageFilter">The filter used to extract specific data from the JSON payload. Cannot be null or empty.</param>
+        </member>
+        <member name="T:Expi40.Core.EventManagement.EventMessages.IOnValueOnPhysicalLineChangedMessage">
+            <summary>
+            Defines interface for messages indicating that the value in a physical line's production process has changed.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.EventManagement.EventMessages.IOnValueOnPhysicalLineChangedMessage.PartParentName">
+            <summary>
+            Part's parent name = Unity GameObject.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.EventManagement.EventMessages.IOnValueOnPhysicalLineChangedMessage.ControlPropertyName">
+            <summary>
+            Name of the control property within the GameObject to update.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.EventManagement.EventMessages.IOnValueOnPhysicalLineChangedMessage.Value">
+            <summary>
+            New value of control property on physical line.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.EventManagement.EventMessages.IOnValueOnVirtualLineChangedMessage">
+            <summary>
+            Defines interface for message indicating that value in virtual line's production process has changed.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.EventManagement.EventMessages.IOnValueOnVirtualLineChangedMessage.DataWriteAddress">
+            <summary>
+            Defines write address for property using OPC UA Client/Server or OPC UA PubSub interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.EventManagement.EventMessages.IOnValueOnVirtualLineChangedMessage.Value">
+            <summary>
+            New value of control property on virtual line.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.EventManagement.EventType">
+            <summary>
+            Specifies the types of events that can be raised by the system.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnNotification">
+            <summary>
+            Event triggered when new notification or exception is captured.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnValueOnPhysicalLineChanged">
+            <summary>
+            Event triggered when the value on a physical line changes.
+            </summary>
+            <remarks>
+            Unity SERVER application - raised from OPC UA Client's monitored item.<br/>
+            Unity CLIENT application - raised from MQTT subscriber.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnValueOnVirtualLineChanged">
+            <summary>
+            Event triggered when the value on a virtual line changes.
+            </summary>
+            <remarks>
+            Triggered same way by sensors in both SERVER and CLIENT Unity applications.
+            Unity SERVER application - writes value using OPC UA Client directly to OPC UA Server.
+            Unity CLIENT application - raises OnClientValueOnVirtualLineChanged event, that is then handled by SERVER.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnClientValueOnVirtualLineChanged">
+            <summary>
+            Event triggered when the value in CLIENT Unity application on a virtual line changes.
+            </summary>
+            <remarks>
+            Event is consumed by Unity SERVER application by MQTT subscriber.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected">
+            <summary>
+            Event triggered when a new physical product is detected.
+            </summary>
+            <remarks>
+            Unity SERVER application - raised from OPC UA Client's monitored item.<br/>
+            Unity CLIENT application - raised from MQTT subscriber.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnNewVirtualProductInstantiated">
+            <summary>
+            Event triggered by Unity SERVER application when a new virtual product instance is instantiated.
+            </summary>
+            <remarks>
+            Consumer of this event is Unity CLIENT application via MQTT subscriber.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.EventManagement.EventType.OnNewVirtualProductInstanceRequested">
+            <summary>
+            Event triggered by Unity CLIENT application when a request for a new virtual product instance is made.
+            </summary>
+            <remarks>
+            Consumer of this event is Unity SERVER application via MQTT subscriber.
+            </remarks>
+        </member>
+        <member name="T:Expi40.Core.EventManagement.IEventManager">
+            <summary>
+            Defines methods for subscribing to, unsubscribing from, and triggering application events.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.EventManagement.IEventManager.StartListening``1(Expi40.Core.EventManagement.EventType,System.Action{``0})">
+            <summary>
+            Registers a listener to be invoked when the specified event type is raised.
+            </summary>
+            <param name="eventType">The type of event to listen for. Determines which events will trigger the listener.</param>
+            <param name="listener">The action to invoke when the event occurs. The parameter provides event data. Cannot be null.</param>
+            <typeparam name="T">The type of the event data parameter.</typeparam>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="listener"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.EventManagement.IEventManager.StopListening``1(Expi40.Core.EventManagement.EventType,System.Action{``0})">
+            <summary>
+            Stops invoking the specified listener when the given event type is raised.
+            </summary>
+            <param name="eventType">The type of event for which the listener should be removed.</param>
+            <param name="listener">The callback to remove from the invocation list for the specified event type. Cannot be null.</param>
+            <typeparam name="T">The type of the event data parameter.</typeparam>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="listener"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.EventManagement.IEventManager.TriggerEvent``1(Expi40.Core.EventManagement.EventType,``0)">
+            <summary>
+            Triggers the specified event and passes an associated parameter to event handlers.
+            </summary>
+            <param name="eventType">The type of event to trigger. Determines which event handlers will be invoked.</param>
+            <param name="parameter">Typed object containing data to be passed to the event handlers. Can be null if no additional data is required.</param>
+            <typeparam name="T">The type of the event data parameter.</typeparam>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.AasDataTypeNotDefinedException">
+            <summary>
+            Exception thrown when a specified Asset Administration Shell (AAS) data type is not defined.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.AasDataTypeNotDefinedException.#ctor(System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.AasDataTypeNotDefinedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.BasyxClient.ProductionLineModelNotPreparedException">
+            <summary>
+            Thrown when the production line model is accessed but has not been prepared yet.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.BasyxClient.ProductionLineModelNotPreparedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.BasyxClient.ProductionLineModelNotPreparedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.AdditionalPropertyNotDefinedException">
+            <summary>
+            Thrown when a requested additional property is not defined for the line part.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.AdditionalPropertyNotDefinedException.#ctor(System.String,System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.AdditionalPropertyNotDefinedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.ControlPropertyNotDefinedException">
+            <summary>
+            Thrown when a requested control property is not defined for the line part.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.ControlPropertyNotDefinedException.#ctor(System.String,System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.ControlPropertyNotDefinedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.EventManagerNotInjectedException">
+            <summary>
+            Thrown when EventManager is not injected into a line part that requires it.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.EventManagerNotInjectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.EventManagerNotInjectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.MissingRigidbodyException">
+            <summary>
+            Thrown when a Rigidbody component is missing from the parent hierarchy.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.MissingRigidbodyException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.MissingRigidbodyException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.NotificationManagerNotInjectedException">
+            <summary>
+            Thrown when NotificationManager is not injected into a line part that requires it.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.NotificationManagerNotInjectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.NotificationManagerNotInjectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.LinePart.ParentNotSetException">
+            <summary>
+            Thrown when a line part's parent is not set.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.LinePart.ParentNotSetException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.LinePart.ParentNotSetException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientCertificateCreationFailedException">
+            <summary>
+            Thrown when the creation of an OPC UA client certificate fails.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientCertificateCreationFailedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientCertificateCreationFailedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientInvalidNumberOfArgumentsException">
+            <summary>
+            Thrown when the number of provided arguments to OPC UA Client certificate checker is invalid.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientInvalidNumberOfArgumentsException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientInvalidNumberOfArgumentsException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientUnexpectedException">
+            <summary>
+            Thrown when an unexpected exception occurs in the OPC UA Client certificate checker.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientUnexpectedException.#ctor(System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.ClientCertificateChecker.OpcUaClientUnexpectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientAlreadyConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to connect an OPC UA client that is already connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientAlreadyConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientAlreadyConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientCertificateCouldNotBeCreatedException">
+            <summary>
+            Thrown when the OPC UA client certificate could not be created.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientCertificateCouldNotBeCreatedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientCertificateCouldNotBeCreatedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientNotConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to use an OPC UA client that is not connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientNotConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.OpcUaClient.OpcUaClientNotConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConfiguredException">
+            <summary>
+            Exception thrown when an attempt is made to configure a publisher that is already configured.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConfiguredException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConfiguredException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to connect a publisher that is already connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Publisher.PublisherAlreadyConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Publisher.PublisherNotConfiguredException">
+            <summary>
+            Exception thrown when an attempt is made to use a publisher that is not configured.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Publisher.PublisherNotConfiguredException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Publisher.PublisherNotConfiguredException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Publisher.PublisherNotConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to use a publisher that is not connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Publisher.PublisherNotConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Publisher.PublisherNotConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.ResourceNotConfiguredException">
+            <summary>
+            Thrown when a requested resource is not configured in the system.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.ResourceNotConfiguredException.#ctor(System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.ResourceNotConfiguredException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Subscriber.SubscriberAlreadyConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to connect a subscriber that is already connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Subscriber.SubscriberAlreadyConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Subscriber.SubscriberAlreadyConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Subscriber.SubscriberNotConnectedException">
+            <summary>
+            Exception thrown when an attempt is made to use a subscriber that is not connected.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Subscriber.SubscriberNotConnectedException.#ctor">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Subscriber.SubscriberNotConnectedException"/>
+        </member>
+        <member name="T:Expi40.Core.Exceptions.Subscriber.SubscriberUnknownTopicException">
+            <summary>
+            Exception thrown when an unknown topic is referenced in a subscriber.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Exceptions.Subscriber.SubscriberUnknownTopicException.#ctor(System.String)">
+            <inheritdoc cref="T:Expi40.Core.Exceptions.Subscriber.SubscriberUnknownTopicException"/>
+        </member>
+        <member name="T:Expi40.Core.Extensions.ListExtensions">
+            <summary>
+            Provides extension methods for working with generic lists.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Extensions.ListExtensions.AddReplaceOldest``1(System.Collections.Generic.List{``0},``0,System.Int32)">
+            <summary>
+            Adds an item to the end of the list, replacing the oldest item if the list has reached the specified maximum
+            size.
+            </summary>
+            <remarks>If the list already contains the maximum number of items, the first (oldest) item is
+            removed before adding the new item. This method modifies the original list in place.</remarks>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The list to which the item will be added. Cannot be null.</param>
+            <param name="value">The item to add to the list.</param>
+            <param name="maxSize">The maximum number of items the list can contain. Must be greater than zero. Defaults to 100.</param>
+        </member>
+        <member name="T:Expi40.Core.Helpers.SecureStringHelper">
+            <summary>
+            Provides helper methods for creating and manipulating instances of <see cref="T:System.Security.SecureString"/>.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Helpers.SecureStringHelper.SecureStringAppendChars(System.String)">
+            <summary>
+            Creates a new read-only <see cref="T:System.Security.SecureString"/> from the specified string.
+            </summary>
+            <param name="str">The string whose characters are used to initialize the <see cref="T:System.Security.SecureString"/>. Cannot be null or empty.</param>
+            <returns>A read-only <see cref="T:System.Security.SecureString"/> containing the characters from the specified string.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="str"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.Helpers.SerializationHelper">
+            <summary>
+            Provides helper methods for serializing and deserializing objects.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Helpers.SerializationHelper.XmlDeserialize``1(System.String)">
+            <summary>
+            Deserializes the specified XML string into an object of type T.
+            </summary>
+            <remarks>The type T must have a parameterless constructor and be compatible with XML
+            serialization. If the XML does not match the expected structure for type T, an exception may be
+            thrown.</remarks>
+            <typeparam name="T">The type of the object to deserialize to. Must be a type that can be deserialized from XML.</typeparam>
+            <param name="contentToDeserialize">The XML string containing the serialized representation of the object. Cannot be null or empty.</param>
+            <returns>An instance of type T deserialized from the specified XML string.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="contentToDeserialize"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.LinePart.IChild">
+            <summary>
+            Interface of a line part child.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IChild.Parent">
+            <summary>
+            Accessor for the parent line part of the current child line part.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IChild.Initialized">
+            <summary>
+            Defines whether the child has been initialized.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IChild.FinalizeInitialization">
+            <summary>
+            Completes the initialization process for the component, finalizing any setup required before use.
+            </summary>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.EventManagerNotInjectedException">Thrown if the event manager has not been injected and is required for initialization.</exception>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.NotificationManagerNotInjectedException">Thrown if the notification manager has not been injected and is required for initialization.</exception>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.ParentNotSetException">Thrown if the parent line part has not been set.</exception>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.ControlPropertyNotDefinedException">Thrown if any required control property is not defined.</exception>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.AdditionalPropertyNotDefinedException">Thrown if any required additional property is not defined.</exception>
+        </member>
+        <member name="T:Expi40.Core.LinePart.IParent">
+            <summary>
+            Interface of a line part parent.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.LinePart.IParent._notSetTimeSeriesQuery">
+            <summary>
+            Represents a placeholder value indicating that a time series query has not been set.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IParent.IsOnlyVirtual">
+            <summary>
+            Property indicating if the line part is only virtual. Value set from SM UnityData / IsOnlyVirtual.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IParent.IsSensor">
+            <summary>
+            Property indicating if the line part is a sensor. Value set from SM UnityData / IsSensor.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IParent.Name">
+            <summary>
+            Name of the line part. Corresponds to ShortId of AAS of the line part.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.IParent.TimeSeriesQuery">
+            <summary>
+            Query to access history data in time-series database. Value set from SM TimeSeries / Segments / LinkedSegment / Query.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.AddAdditionalProperty(Expi40.Core.LinePart.Properties.AdditionalProperty)">
+            <summary>
+            Adds an additional property to the collection.
+            </summary>
+            <param name="additionalProperty">The additional property to add. Cannot be null.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.AddControlProperty(Expi40.Core.LinePart.Properties.ControlProperty)">
+            <summary>
+            Adds a control property to the collection.
+            </summary>
+            <param name="controlProperty">The control property to add. Cannot be null.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.SetIsOnlyVirtual(System.Boolean)">
+            <summary>
+            Sets whether the current instance should be considered as only virtual, without a physical representation.
+            </summary>
+            <param name="isOnlyVirtual">Specifies whether the instance is only virtual. Set to <see langword="true"/> to mark the instance as
+            virtual; otherwise, <see langword="false"/>.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.SetIsSensor(System.Boolean)">
+            <summary>
+            Sets whether the object should behave as a sensor.
+            </summary>
+            <param name="isSensor">A value indicating whether the object is set as a sensor. Specify <see langword="true"/> to enable sensor
+            behavior; otherwise, <see langword="false"/>.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.SetTimeSeriesQuery(System.String)">
+            <summary>
+            Sets the query for accessing time-series data.
+            </summary>
+            <param name="timeSeriesQuery">The query string to use for time-series data access. Can not be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="timeSeriesQuery"/> is empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.ContainsControlProperty(System.String)">
+            <summary>
+            Determines whether a control property with the specified name exists.
+            </summary>
+            <param name="propertyName">The name of the control property to locate. Cannot be null or empty.</param>
+            <returns>true if a control property with the specified name exists; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.ContainsAdditionalProperty(System.String)">
+            <summary>
+            Determines whether an additional property with the specified name exists.
+            </summary>
+            <param name="propertyName">The name of the additional property to locate. Cannot be null or empty.</param>
+            <returns>true if an additional property with the specified name exists; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.GetControlProperty(System.String)">
+            <summary>
+            Retrieves the control property with the specified name.
+            </summary>
+            <param name="propertyName">The name of the control property to retrieve. Comparison is case-insensitive.</param>
+            <returns>The <see cref="T:Expi40.Core.LinePart.Properties.ControlProperty"/> instance that matches the specified property name.</returns>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.ControlPropertyNotDefinedException">Thrown if a control property with the specified name is not defined.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IParent.GetAdditionalProperty(System.String)">
+            <summary>
+            Retrieves the additional property with the specified name.
+            </summary>
+            <param name="propertyName">The name of the additional property to retrieve. Comparison is case-insensitive.</param>
+            <returns>The <see cref="T:Expi40.Core.LinePart.Properties.AdditionalProperty"/> instance that matches the specified property name.</returns>
+            <exception cref="T:Expi40.Core.Exceptions.LinePart.AdditionalPropertyNotDefinedException">Thrown if an additional property with the specified name is not defined.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.LinePart.IRequiresEventManager">
+            <summary>
+            Defines a contract for line parts that require injection of an event manager.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IRequiresEventManager.InjectEventManager(Expi40.Core.EventManagement.IEventManager)">
+            <summary>
+            Injects an implementation of the event manager to be used by the component.
+            </summary>
+            <param name="eventManager">The event manager instance to inject. Cannot be null.</param>
+        </member>
+        <member name="T:Expi40.Core.LinePart.IRequiresNotificationManager">
+            <summary>
+            Defines a contract for line parts that require injection of a notification manager.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.IRequiresNotificationManager.InjectNotificationManager(Expi40.Core.NotificationManagement.INotificationManager)">
+            <summary>
+            Injects an implementation of the notification manager to be used by the component.
+            </summary>
+            <param name="notificationManager">The notification manager instance to inject. Cannot be null.</param>
+        </member>
+        <member name="T:Expi40.Core.LinePart.Properties.AdditionalProperty">
+            <summary>
+            Constant additional property used by virtual production line parts to manage their behavior.
+            Additional properties are instances of properties defined in Submodel UnityData.AdditionalProperties.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.AdditionalProperty.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the AdditionalProperty.
+            </summary>
+            <param name="name">Name of corresponding property in the Submodel.</param>
+            <param name="dataType">The data type of the property, represented as a string. Common values include "int", "float", or "bool".</param>
+            <param name="initialValue">The initial value assigned to the property. The type should match the specified data type.</param>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.AdditionalProperty.Name">
+            <summary>
+            Name of corresponding property in the Submodel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.AdditionalProperty.DataType">
+            <summary>
+            Data type of the property value as defined in the Submodel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.AdditionalProperty.Value">
+            <summary>
+            Exposes raw value of the additional property.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.AdditionalProperty.GetTypedValue``1">
+            <summary>
+            Gets the value cast to the specified type.
+            </summary>
+            <remarks>The caller is responsible for ensuring that the underlying value is compatible with
+            the specified type parameter. An invalid cast will result in a runtime exception.</remarks>
+            <typeparam name="T">The type to which the value is cast.</typeparam>
+            <returns>The value cast to type <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="T:Expi40.Core.LinePart.Properties.ControlProperty">
+            <summary>
+            Time-varying control property used by virtual production line parts to manage their behavior.
+            Control properties are instances of properties defined in Submodel OperationalData.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.ControlProperty.#ctor(System.String,System.String,System.Object,Expi40.Core.LinePart.Properties.InterfaceAddress,Expi40.Core.LinePart.Properties.InterfaceAddress)">
+            <summary>
+            Initializes a new instance of the ControlProperty.
+            </summary>
+            <param name="name">Name of corresponding property in the Submodel.</param>
+            <param name="dataType">The AAS data type of the property, represented as a string.</param>
+            <param name="initialValue">The initial value assigned to the property. The type should match the specified data type.</param>
+            <param name="dataAccessAddress">The address used to access values of the control property using OPC UA Client/Server or OPC UA PubSub interface.</param>
+            <param name="dataWriteAddress">The address used to write values to the control property using OPC UA Client/Server or OPC UA PubSub interface.</param>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.Name">
+            <summary>
+            Name of corresponding property in the Submodel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.DataType">
+            <summary>
+            Data type of the property value as defined in the Submodel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.DataAccessAddress">
+            <summary>
+            Defines access address for property using OPC UA Client/Server or OPC UA PubSub interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.DataWriteAddress">
+            <summary>
+            Defines write address for property using OPC UA Client/Server or OPC UA PubSub interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.PhysicalValue">
+            <summary>
+            Exposes raw physical value of the control property.
+            Physical value represents the actual state of the control property in physical production environment.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.ControlProperty.VirtualValue">
+            <summary>
+            Exposes raw virtual value of the control property.
+            Virtual value represents the intended state of the control property in the virtual production environment.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.ControlProperty.SetRawPhysicalValue(System.Object)">
+            <summary>
+            Sets raw physical value according to OPC UA Client/Server or PubSub notifications.
+            </summary>
+            <param name="value">The value to assign as the physical value.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.ControlProperty.SetRawVirtualValue(System.Object)">
+            <summary>
+            Sets raw virtual value according to virtual production line part logic.
+            </summary>
+            <param name="value">The value to assign as the virtual value.</param>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.ControlProperty.GetTypedPhysicalValue``1">
+            <summary>
+            Returns the physical value cast to the specified type.
+            </summary>
+            <remarks>The caller is responsible for ensuring that the underlying value is compatible with
+            the specified type parameter. An invalid cast will result in a runtime exception.</remarks>
+            <typeparam name="T">The type to which the physical value is cast.</typeparam>
+            <returns>The physical value cast to type <typeparamref name="T"/>.</returns>
+            <exception cref="T:System.InvalidCastException">Thrown when the cast is invalid.</exception>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.ControlProperty.GetTypedVirtualValue``1">
+            <summary>
+            Gets the virtual value cast to the specified type.
+            </summary>
+            <remarks>The caller is responsible for ensuring that the underlying value is compatible with
+            the specified type parameter. An invalid cast will result in a runtime exception.</remarks>
+            <typeparam name="T">The type to which the virtual value is cast.</typeparam>
+            <returns>The virtual value cast to type <typeparamref name="T"/>.</returns>
+            <exception cref="T:System.InvalidCastException">Thrown when the cast is invalid.</exception>
+        </member>
+        <member name="T:Expi40.Core.LinePart.Properties.InterfaceAddress">
+            <summary>
+            Represents a set of OPC UA addressing information for a communication interface, including server NodeId
+            and PubSub property identifiers.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.LinePart.Properties.InterfaceAddress._notDefined">
+            <summary>
+            Represents a constant string value indicating that a value is not defined.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.InterfaceAddress.OpcUaServerNodeId">
+            <summary>
+            OPC UA Server NodeId used to access the property via OPC UA Client/Server interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.LinePart.Properties.InterfaceAddress.OpcUaPubSubProperty">
+            <summary>
+            OPC UA PubSub property value associated with this instance.
+            </summary>
+            <remarks>
+            Consists of "{PartParentName}.{ControlPropertyName}".
+            </remarks>
+        </member>
+        <member name="M:Expi40.Core.LinePart.Properties.InterfaceAddress.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the InterfaceAddress class with the specified OPC UA addressing information.
+            </summary>
+            <param name="opcUaServerNodeId">The OPC UA server node identifier to associate with this address, or null to omit the server node ID.</param>
+            <param name="opcUaPubSubProperty">The OPC UA PubSub property to associate with this address, or null if not applicable.</param>
+            <exception cref="T:System.ArgumentException">Thrown when both opcUaServerNodeId and opcUaPubSubProperty are null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.Models.AasDataType">
+            <summary>
+            Represents a mapping between an Asset Administration Shell (AAS) data type, its corresponding .NET type, and its
+            OPC UA data type identifier.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.AasDataType.AasTypeName">
+            <summary>
+            Name of data type within AAS, e.g. 'xs:integer', 'xs:string', ...
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.AasDataType.Type">
+            <summary>
+            Data type within .NET, e.g. typeof(int), typeof(string), ...
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.AasDataType.OpcUaDataType">
+            <summary>
+            Data type within OPC UA, e.g. DataTypes.Int32, DataTypes.String, ...
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.AasDataType.#ctor(System.String,System.Type,System.UInt32)">
+            <summary>
+            Initializes a new instance of the AasDataType class with the specified type name, .NET type, and OPC UA data
+            type identifier.
+            </summary>
+            <param name="name">The name of the Asset Administration Shell (AAS) data type. Cannot be null or empty.</param>
+            <param name="type">The .NET type that represents the AAS data type. Cannot be null.</param>
+            <param name="opcUaDataType">The OPC UA data type identifier associated with the AAS data type. Must be valid Opc.Ua.DataTypes value.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="name"/> is null or empty, or <paramref name="opcUaDataType"/> is not a valid OPC UA data type..</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="type"/> is null.</exception>
+        </member>
+        <member name="T:Expi40.Core.Models.AasSupportedDataTypes">
+            <summary>
+            Provides mapping utilities between Asset Administration Shell (AAS) data type names, their corresponding .NET
+            types, and OPC UA data type identifiers supported by the system.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Models.AasSupportedDataTypes.SupportedDataTypes">
+            <summary>
+            List of supported AAS data types with their corresponding .NET types and OPC UA data type identifiers.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.AasSupportedDataTypes.GetDotNetType(System.String)">
+            <summary>
+            Gets the corresponding .NET <see cref="T:System.Type"/> for the specified AAS type name.
+            </summary>
+            <param name="aasTypeName">The name of the AAS data type to map to a .NET type. Cannot be null or empty.</param>
+            <returns>The <see cref="T:System.Type"/> that corresponds to the specified AAS type name, or null if the type name is not
+            supported.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="aasTypeName"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.Core.Models.AasSupportedDataTypes.GetOpcUaDataType(System.String)">
+            <summary>
+            Gets the OPC UA data type identifier corresponding to the specified Asset Administration Shell (AAS) type
+            name.
+            </summary>
+            <param name="aasTypeName">The name of the AAS type for which to retrieve the OPC UA data type identifier. Cannot be null or empty.</param>
+            <returns>The OPC UA data type identifier associated with the specified AAS type name.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="aasTypeName"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Aas.BaseModelInfo">
+            <summary>
+            Base for any AAS model - ProductionLineModel, LinePartModel, ServiceModel, ControllerModel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.BaseModelInfo.IdShort">
+            <summary>
+            IdShort of AAS
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.BaseModelInfo.Id">
+            <summary>
+            Id of AAS
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.BaseModelInfo.IdBase64">
+            <summary>
+            Base64-encoded Id of AAS
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Aas.ControllerModel">
+            <summary>
+            Model of Controller AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.ControllerModel.AssetInterfaces">
+            <summary>
+            Collection of asset interfaces of the controller from AssetInterfacesDescription Submodel.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Aas.ControllerModel.AddAssetInterface(Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel)">
+            <summary>
+            Adds an asset interface to the collection of asset interfaces.
+            </summary>
+            <param name="assetInterface">The asset interface to add.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Aas.LinePartModel">
+            <summary>
+            Model of a LinePart AAS, e.g. Conveyor, OptoGate, etc.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.TransformationMatrix">
+            <summary>
+            Cumulative transformation matrix of the:<br/>
+            - production line transformation matrix,<br/>
+            - products and subproducts transformation matrices,<br/>
+            - line part transformation matrix.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.Model3DDownloadLink">
+            <summary>
+            Download link for platform-specific (UNITY_STANDALONE_WIN/UNITY_ANDROID/UNITY_WSA) 3D model of the line part.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.Model3DName">
+            <summary>
+            Name of the 3D model of the line part, e.g. "expi40.conveyor1", "expi40.optogate1", etc.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.Model3DFormat">
+            <summary>
+            File format of the 3D model of the line part, e.g. "unity3d", "obj", etc.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.ControlProperties">
+            <summary>
+            Time-varying operational data of the line part from OperationalData submodel in AAS.
+            </summary>
+            <remarks>
+            OperationalData => ControlProperties of line part in EXPI40 Unity context.
+            </remarks>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.AdditionalProperties">
+            <summary>
+            Collection of additional properties of the line part from AdditionalProperties in UnityData Submodel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.IsOnlyVirtual">
+            <summary>
+            Indicates whether the line part is only virtual.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.IsSensor">
+            <summary>
+            Indicates whether the line part functions as a sensor.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.ControlPlugin">
+            <summary>
+            The name of the control plugin associated with the line part, if applicable.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.TimeSeriesEndpoint">
+            <summary>
+            Provides the endpoint for querying time series data related to the line part, if available.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.LinePartModel.TimeSeriesQuery">
+            <summary>
+            Provides the query for retrieving time series data related to the line part, if available.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Aas.LinePartModel.AddControlProperty(Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel)">
+            <summary>
+            Adds a control property to the collection.
+            </summary>
+            <param name="controlProperty">The control property to add.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Aas.LinePartModel.AddAdditionalProperty(Expi40.Core.Models.Basyx.BaseItems.AasPropertyModel)">
+            <summary>
+            Adds an additional property to the collection.
+            </summary>
+            <param name="additionalProperty">The additional property to add.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Aas.ProductionLineModel">
+            <summary>
+            Model of a ProductionLine AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.ProductionLineModel.Controller">
+            <summary>
+            Reference to model of the Controller AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.ProductionLineModel.LineParts">
+            <summary>
+            The list of referenced line parts in the ProductionLine AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Aas.ProductionLineModel.Services">
+            <summary>
+            The list of referenced services associated with the ProductionLine AAS.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Aas.ProductionLineModel.AddLinePart(Expi40.Core.Models.Basyx.Aas.LinePartModel)">
+            <summary>
+            Adds a line part to the collection of line parts.
+            </summary>
+            <param name="linePart">The line part to add.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Aas.ProductionLineModel.AddService(Expi40.Core.Models.Basyx.Aas.ServiceModel)">
+            <summary>
+            Adds a service to the collection.
+            </summary>
+            <param name="service">The service to add.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Aas.ServiceModel">
+            <summary>
+            Model of a Service AAS.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.BaseItems.AasPropertyModel">
+            <summary>
+            Model of AAS Property.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.AasPropertyModel.DataType">
+            <summary>
+            Represents data type of AAS property, e.g. "xs:int", "xs:string", "xs:boolean", etc.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.AasPropertyModel.IdShort">
+            <summary>
+            IdShort of the AAS property, which serves as a unique identifier within the context of the AAS model.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.AasPropertyModel.Value">
+            <summary>
+            String representation of the value of the AAS property.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix">
+            <summary>
+            Represents a 3D transformation matrix with rotation and translation components using decimal precision.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rxx">
+            <summary>
+            Rotation matrix element at row 1, column 1 (affecting X axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rxy">
+            <summary>
+            Rotation matrix element at row 1, column 2 (affecting X axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rxz">
+            <summary>
+            Rotation matrix element at row 1, column 3 (affecting X axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Ryx">
+            <summary>
+            Rotation matrix element at row 2, column 1 (affecting Y axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Ryy">
+            <summary>
+            Rotation matrix element at row 2, column 2 (affecting Y axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Ryz">
+            <summary>
+            Rotation matrix element at row 2, column 3 (affecting Y axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rzx">
+            <summary>
+            Rotation matrix element at row 3, column 1 (affecting Z axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rzy">
+            <summary>
+            Rotation matrix element at row 3, column 2 (affecting Z axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Rzz">
+            <summary>
+            Rotation matrix element at row 3, column 3 (affecting Z axis).
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Tx">
+            <summary>
+            Translation component along the X axis.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Ty">
+            <summary>
+            Translation component along the Y axis.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Tz">
+            <summary>
+            Translation component along the Z axis.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix.Combine(Expi40.Core.Models.Basyx.BaseItems.TransformationMatrix)">
+            <summary>
+            Combines two transformation matrices by applying the child transformation in the coordinate system of the
+            parent => this.
+            </summary>
+            <param name="child">The child transformation matrix.</param>
+            <returns>A new transformation matrix representing the combined transformation.</returns>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel">
+            <summary>
+            A model specifically used for asset interfaces from AssetInterfacesDescription Submodel of controller AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.IdShort">
+            <summary>
+            IdShort of asset interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.SemanticIds">
+            <summary>
+            Collection of semantic IDs associated with the asset interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.BaseEndpoint">
+            <summary>
+            Base endpoint from EndpointMetadata.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.MandatoryInteractionMetadata">
+            <summary>
+            Provides mandatory interface's interaction metadata required by EXPI40 context.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.ControlInteractionMetadata">
+            <summary>
+            Provides control interface's interaction metadata used for control properties of line parts in EXPI40 context.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.AddMandatoryAffordance``1(``0,Expi40.Core.Unity.InteractionMetadataType)">
+            <summary>
+            Adds a mandatory interface affordance with the specified metadata type.
+            </summary>
+            <typeparam name="T">The type of affordance, derived from <see cref="T:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase"/>.</typeparam>
+            <param name="affordance">The affordance instance to add.</param>
+            <param name="metadataType">The type of interaction metadata associated with the affordance.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.AddControlAffordance``1(``0,Expi40.Core.Unity.InteractionMetadataType)">
+            <summary>
+            Adds a control interface affordance with the specified metadata type.
+            </summary>
+            <typeparam name="T">The type of affordance, derived from <see cref="T:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase"/>.</typeparam>
+            <param name="affordance">The affordance instance to add.</param>
+            <param name="metadataType">The type of interaction metadata associated with the affordance.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.AddAffordance``1(``0,Expi40.Core.Unity.InteractionMetadataType,System.Collections.Generic.Dictionary{Expi40.Core.Unity.InteractionMetadataType,System.Collections.Generic.List{Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase}})">
+            <summary>
+            Adds an affordance to the list associated with the specified interaction metadata type in the given
+            dictionary.
+            </summary>
+            <typeparam name="T">The type of affordance, derived from <see cref="T:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase"/>.</typeparam>
+            <param name="affordance">The affordance instance to add.</param>
+            <param name="metadataType">The interaction metadata type key.</param>
+            <param name="interactionMetadata">The dictionary mapping interaction metadata types to lists of affordances.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.AssignSemanticIds(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Replaces the current semantic IDs with the specified collection.
+            </summary>
+            <param name="semanticIds">A collection of semantic IDs to assign.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.AssetInterfaceDescriptionModel.AddSemanticId(System.String)">
+            <summary>
+            Adds a SemanticId to the collection.
+            </summary>
+            <param name="semanticId">The SemanticId to add.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel">
+            <summary>
+            A model specifically used for properties from OperationalData Submodel of line part AAS.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel.ControlProperty">
+            <summary>
+            Specific OperationalData SM's property.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel.AssetInterfaceReferences">
+            <summary>
+            Collection of referenced communication interfaces and properties within them
+            for given <see cref="P:Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel.ControlProperty"/>, e.g.:<br/>
+            <code>
+            [
+                [ "OpcUaClientServerInterface", "properties", "prop1" ],
+                [ "OpcUaPubSubInterface", "events", "event1" ]
+            ]
+            </code>
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.Basyx.Submodels.ControlPropertyModel.AddAssetInterfaceReference(Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase)">
+            <summary>
+            Adds an asset interface reference to the collection.
+            </summary>
+            <param name="assetInterfaceReference">The asset interface reference to add.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Action.ActionAffordance">
+            <summary>
+            Represents Action affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#ActionAffordance"/>.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Action.OpcUaPubSubActionAffordance">
+            <summary>
+            Model representing an Action affordance for OPC UA PubSub communication pattern.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Action.OpcUaPubSubActionAffordance.Filter">
+            <summary>
+            Defines Topic / Queue filter for PubSub publishing.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Action.OpcUaPubSubActionAffordance.InputPropertyName">
+            <summary>
+            Defines the name of the input property for the action.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase">
+            <summary>
+            Base class for all types of ThingDescription affordance models.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.IdShort">
+            <summary>
+            IdShort of Affordance.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.Href">
+            <summary>
+            Affordance's href.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.SemanticIds">
+            <summary>
+            List of semantic IDs associated with the affordance.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.Operations">
+            <summary>
+            List of operations associated with the affordance.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.AssignSemanticIds(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Replaces the current semantic IDs with the specified collection.
+            </summary>
+            <param name="semanticIds">A collection of semantic IDs to assign.</param>
+        </member>
+        <member name="M:Expi40.Core.Models.ThingDescription.Affordance.AffordanceBase.AssignOperations(System.Collections.Generic.IEnumerable{Expi40.Core.Unity.AssetInterfaceOperation})">
+            <summary>
+            Replaces the current operations with the specified collection.
+            </summary>
+            <param name="operations">The collection of operations to assign.</param>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Event.EventAffordance">
+            <summary>
+            Represents Event affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#EventAffordance"/>.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Event.OpcUaPubSubEventAffordance">
+            <summary>
+            Model representing an Event affordance for OPC UA PubSub communication pattern.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Event.OpcUaPubSubEventAffordance.Filter">
+            <summary>
+            Defines Topic / Queue filter for PubSub subscription.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Event.OpcUaPubSubEventAffordance.MessageFilter">
+            <summary>
+            Defines a pattern by which a message content is filtered.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Property.OpcUaClientServerPropertyAffordance">
+            <summary>
+            Model representing a Property affordance for OPC UA Client-Server communication pattern.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Property.OpcUaClientServerPropertyAffordance.Namespace">
+            <summary>
+            OPC UA Server's namespace.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.Models.ThingDescription.Affordance.Property.OpcUaClientServerPropertyAffordance.NodeId">
+            <summary>
+            OPC UA Server's NodeId.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Models.ThingDescription.Affordance.Property.PropertyAffordance">
+            <summary>
+            Represents Property affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#PropertyAffordance"/>.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.NotificationManagement.INotificationItem">
+            <summary>
+            Represents a notification item containing information about a notification event, including its text, timestamp,
+            and any associated exception.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationItem.Exception">
+            <summary>
+            Gets the exception that caused the current operation to fail.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationItem.Notification">
+            <summary>
+            Gets the text content of the notification.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationItem.DisplayText">
+            <summary>
+            Gets the text that is displayed to represent this item in the user interface.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationItem.Timestamp">
+            <summary>
+            Gets the UTC date and time associated with the current instance.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.NotificationManagement.INotificationManager">
+            <summary>
+            Defines methods and properties for managing notifications and error messages within an application.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationManager.ErrorsAsString">
+            <summary>
+            Gets a concatenated string representation of all errors - most recent first.
+            </summary>
+        </member>
+        <member name="P:Expi40.Core.NotificationManagement.INotificationManager.NotificationsAsString">
+            <summary>
+            Gets a string representation of all notifications associated with the current instance - most recent first.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.NotificationManagement.INotificationManager.AddError(System.Exception)">
+            <summary>
+            Adds the specified exception to the collection of errors for later processing or reporting.
+            </summary>
+            <param name="ex">The exception to add. Cannot be null.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="ex"/> is null.</exception>
+        </member>
+        <member name="M:Expi40.Core.NotificationManagement.INotificationManager.AddNotification(System.String)">
+            <summary>
+            Adds a notification message to the collection of notifications.
+            </summary>
+            <param name="notification">The notification message to add. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="notification"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.Core.NotificationManagement.NotificationType">
+            <summary>
+            Specifies the type of notification.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.NotificationManagement.NotificationType.Notification">
+            <summary>
+            Represents a message or alert intended to inform users of an event or status change.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.NotificationManagement.NotificationType.Exception">
+            <summary>
+            Represents an exception or error that occurs during the execution of a program.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Unity.ApplicationInstance">
+            <summary>
+            Specifies the type of application instance.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.ApplicationInstance.UNKNOWN">
+            <summary>
+            Represents an unspecified value.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.ApplicationInstance.SERVER">
+            <summary>
+            Represents a server instance of EXPI40 application.
+            </summary>
+            <remarks>
+            There is exactly one server instance in an EXPI40 network.
+            </remarks>
+        </member>
+        <member name="F:Expi40.Core.Unity.ApplicationInstance.CLIENT">
+            <summary>
+            Represents a client instance of EXPI40 application.
+            </summary>
+            <remarks>
+            There are multiple client instances (Windows, Android, UWP) in an EXPI40 network.
+            </remarks>
+        </member>
+        <member name="T:Expi40.Core.Unity.AssetInterfaceOperation">
+            <summary>
+            Defines possible operations on asset interface's affordances.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.observeproperty">
+            <summary>
+            Subscribe to property value changes.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.unobserveproperty">
+            <summary>
+            Unsubscribe from property value changes.
+            Inverse operation to <see cref="F:Expi40.Core.Unity.AssetInterfaceOperation.observeproperty"/>.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.writeproperty">
+            <summary>
+            Write property value.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.invokeaction">
+            <summary>
+            Invoke action.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.subscribeevent">
+            <summary>
+            Subscribe to event.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.AssetInterfaceOperation.unsubscribeevent">
+            <summary>
+            Unsubscribe from event.
+            Inverse operation to <see cref="F:Expi40.Core.Unity.AssetInterfaceOperation.subscribeevent"/>.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Unity.AssetInterfaceOperationExtensions">
+            <summary>
+            Provides extension methods for the AssetInterfaceOperation enumeration.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Unity.AssetInterfaceOperationExtensions.GetAssetInterfaceOperationByName(System.String)">
+            <summary>
+            Retrieves the corresponding AssetInterfaceOperation value for the specified operation name.
+            </summary>
+            <param name="name">The name of the asset interface operation to retrieve. This value is case-insensitive and must match a valid
+            AssetInterfaceOperation member.</param>
+            <returns>The AssetInterfaceOperation value that matches the specified name.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if the specified name does not correspond to a valid AssetInterfaceOperation value.</exception>
+        </member>
+        <member name="T:Expi40.Core.Unity.BuildTargetType">
+            <summary>
+            Defines the build target types for Unity EXPI40 Application.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.BuildTargetType.UNKNOWN">
+            <summary>
+            Represents an unspecified value.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.BuildTargetType.UNITY_STANDALONE_WIN">
+            <summary>
+            Indicates that the build target is a standalone Windows platform in Unity.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.BuildTargetType.UNITY_ANDROID">
+            <summary>
+            Indicates that the build target is an Android platform in Unity.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.BuildTargetType.UNITY_WSA">
+            <summary>
+            Indicates that the build target is a Universal Windows Platform in Unity.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Unity.HttpMethodType">
+            <summary>
+            Defines HTTP methods.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.HttpMethodType.GET">
+            <summary>
+            GET method according to HTTP/1.1 specification.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.HttpMethodType.POST">
+            <summary>
+            POST method according to HTTP/1.1 specification.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.HttpMethodType.PUT">
+            <summary>
+            PUT method according to HTTP/1.1 specification.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.HttpMethodType.DELETE">
+            <summary>
+            DELETE method according to HTTP/1.1 specification.
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Unity.InteractionMetadataType">
+            <summary>
+            Defines interaction metadata types according to
+            <a href="https://www.w3.org/2019/wot/td#classes"/>
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.InteractionMetadataType.properties">
+            <summary>
+            Property Affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#PropertyAffordance"/>
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.InteractionMetadataType.actions">
+            <summary>
+            Action Affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#ActionAffordance"/>
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.InteractionMetadataType.events">
+            <summary>
+            Event Affordance according to Thing Description specification,
+            <a href="https://www.w3.org/2019/wot/td#EventAffordance"/>
+            </summary>
+        </member>
+        <member name="T:Expi40.Core.Unity.InteractionMetadataTypeExtensions">
+            <summary>
+            Provides extension methods for working with the InteractionMetadataType enumeration.
+            </summary>
+        </member>
+        <member name="M:Expi40.Core.Unity.InteractionMetadataTypeExtensions.GetInteractionMetadataTypeByName(System.String)">
+            <summary>
+            Retrieves the corresponding InteractionMetadataType value for the specified name.
+            </summary>
+            <param name="name">The name of the interaction metadata type to retrieve. This value is case-sensitive and must match a valid
+            InteractionMetadataType member.</param>
+            <returns>The InteractionMetadataType value that matches the specified name.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if the specified name does not correspond to a valid InteractionMetadataType value.</exception>
+        </member>
+        <member name="T:Expi40.Core.Unity.ProductInstance">
+            <summary>
+            Defines type of product instance in the production line - physical or virtual.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.ProductInstance.PhysicalProduct">
+            <summary>
+            Defines a physical product instance in the production line.
+            </summary>
+        </member>
+        <member name="F:Expi40.Core.Unity.ProductInstance.VirtualProduct">
+            <summary>
+            Defines a virtual product instance in the production line.
+            </summary>
+        </member>
+    </members>
+</doc>

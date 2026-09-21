@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 2199228563
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: expi40.conveyor1.unity3d
+      Dependencies: {}
+    Info_1:
+      Name: expi40.optogate1.unity3d
+      Dependencies: {}
+    Info_2:
+      Name: expi40.console1.unity3d
+      Dependencies: {}

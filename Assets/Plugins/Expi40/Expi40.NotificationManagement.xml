@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.NotificationManagement</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.NotificationManagement.NotificationItem">
+            <summary>
+            Implements the <see cref="T:Expi40.Core.NotificationManagement.INotificationItem"/> interface to represent a notification item with text,
+            an optional exception, and a timestamp indicating when the notification was created.
+            </summary>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationItem.#ctor(System.String,System.Exception)">
+            <inheritdoc cref="T:Expi40.NotificationManagement.NotificationItem"/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationItem.Exception">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationItem.Notification">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationItem.DisplayText">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationItem.Timestamp">
+            <inheritdoc/>
+        </member>
+        <member name="T:Expi40.NotificationManagement.NotificationManager">
+            <summary>
+            Implements the <see cref="T:Expi40.Core.NotificationManagement.INotificationManager"/> interface to manage notifications and error messages,
+            providing methods to add notifications and errors and to trigger related events.
+            </summary>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationManager.#ctor(Expi40.Core.EventManagement.IEventManager)">
+            <inheritdoc cref="T:Expi40.NotificationManagement.NotificationManager"/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationManager.ErrorsAsString">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.NotificationManagement.NotificationManager.NotificationsAsString">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationManager.AddError(System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationManager.AddNotification(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationManager.INotificationItemsAsString(System.Collections.Generic.List{Expi40.Core.NotificationManagement.INotificationItem})">
+            <summary>
+            Creates a formatted string representation of a collection of notification items, including their timestamps
+            and display text in reverse order - most recent first.
+            </summary>
+        </member>
+        <member name="M:Expi40.NotificationManagement.NotificationManager.Dispose">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

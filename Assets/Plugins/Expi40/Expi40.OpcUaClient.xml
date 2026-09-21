@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.OpcUaClient</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.OpcUaClient.Items.CommunicationPair">
+            <summary>
+            Defines a pairing between a monitored OPC UA server node and its corresponding game object and control property.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaClient.Items.CommunicationPair.MonitoredItem">
+            <summary>
+            Monitored OPC UA server node.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaClient.Items.CommunicationPair.PartParentName">
+            <summary>
+            Part's parent name = Unity GameObject associated with the monitored item.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaClient.Items.CommunicationPair.ControlPropertyName">
+            <summary>
+            Name of the control property within the Part's parent to update.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaClient.Items.CommunicationPair.#ctor(Opc.Ua.Client.MonitoredItem,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the MonitoredItemCommunicationPair class with the specified monitored item,
+            game object name, and control property name.
+            </summary>
+            <param name="monitoredItem">The monitored item to associate with the communication pair. Cannot be null.</param>
+            <param name="partParentName">The name of the part's parent game object. Cannot be null or empty.</param>
+            <param name="controlPropertyName">The name of the control property on the game object that is associated with the monitored item. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="monitoredItem"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when <paramref name="partParentName"/> or <paramref name="controlPropertyName"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaClient.OpcUaClient">
+            <summary>
+            Implementation of <see cref="T:Expi40.Core.CommunicationInterfaces.OpcUaClient.IOpcUaClient"/> that provides functionality to connect to an OPC UA server,
+            manage subscriptions, and perform observe/write operations.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.#ctor(Expi40.Core.EventManagement.IEventManager,Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc cref="T:Expi40.OpcUaClient.OpcUaClient"/>
+        </member>
+        <member name="P:Expi40.OpcUaClient.OpcUaClient.IsConnected">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.Connect(Expi40.Core.CommunicationInterfaces.OpcUaClient.ConnectionAttributes)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.Disconnect">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.SubscribeNewPhysicalProductMonitor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.OnNewPhysicalProductDetected(Opc.Ua.Client.MonitoredItem,Opc.Ua.Client.MonitoredItemNotificationEventArgs)">
+            <summary>
+            Handles the event when a new physical product is detected by a monitored item.
+            Once handled, it resets the node value.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.SubscribeNode(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.OnNodeValueChanged(Opc.Ua.Client.MonitoredItem,Opc.Ua.Client.MonitoredItemNotificationEventArgs)">
+            <summary>
+            Process of the value change of notification for a monitored item.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.ApplySubscriptions">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.WriteValue(System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaClient.OpcUaClient.Dispose">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+<linker>
+  <assembly fullname="Expi40.BasyxClient" preserve="all" />
+  <assembly fullname="Expi40.Core" preserve="all" />
+  <assembly fullname="Expi40.EventManagement" preserve="all" />
+  <assembly fullname="Expi40.NotificationManagement" preserve="all" />
+  <assembly fullname="Expi40.OpcUaPubSub" preserve="all" />
+  <assembly fullname="Expi40.Conveyor" preserve="all" />
+  <assembly fullname="Expi40.Mixer" preserve="all" />
+  <assembly fullname="Expi40.OptoGate" preserve="all" />
+  <assembly fullname="Expi40.Slider" preserve="all" />
+  <assembly fullname="Expi40.Stopper" preserve="all" />
+</linker>

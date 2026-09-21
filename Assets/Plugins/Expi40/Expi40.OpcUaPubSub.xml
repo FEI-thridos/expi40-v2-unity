@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.OpcUaPubSub</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.OpcUaPubSub.Items.Pub.PublishedProperty">
+            <summary>
+            Defines a property published by a Publisher.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Pub.PublishedProperty.Name">
+            <summary>
+            Name of the property field.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Pub.PublishedProperty.AasDataType">
+            <summary>
+            Data type of the property according to AAS data types.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Pub.PublishedProperty.InitialValue">
+            <summary>
+            Initial value of the property set within AAS.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Pub.PublishedProperty.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the PublishedProperty class with the specified name, data type, and initial
+            value.
+            </summary>
+            <param name="name">The unique name of the property. Cannot be null or empty.</param>
+            <param name="aasDataType">The AAS data type of the property according to AAS data types. Cannot be null or empty.</param>
+            <param name="initialValue">The initial value assigned to the property. Cannot be null.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="name"/> or <paramref name="aasDataType"/> is null or empty.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="initialValue"/> is null.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter">
+            <summary>
+            Represents a filter for control topic messages.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter.Topic">
+            <summary>
+            Topic used to receive control messages.
+            </summary>
+        </member>
+        <member name="F:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter._messageFilters">
+            <summary>
+            Message filters associated with this topic.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ControlTopicFilter class with the specified topic.
+            </summary>
+            <param name="topic">The topic string to associate with this filter. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="topic"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter.AddMessageFilter(System.String,Expi40.Core.EventManagement.EventType,System.String,System.String)">
+            <summary>
+            Adds a message filter that specifies criteria for handling events associated with a particular part and
+            control property.
+            </summary>
+            <param name="messageFilter">The filter expression used to match messages. Cannot be null or empty.</param>
+            <param name="eventType">The type of event to associate with the message filter.</param>
+            <param name="partParentName">The name of the parent part to which the filter applies. Can be empty in case of <see cref="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected"/>.</param>
+            <param name="controlPropertyName">The name of the control property to monitor for the specified event. Can be empty in case of <see cref="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected"/>.</param>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.ControlTopicFilter.GetMessageFilters">
+            <summary>
+            Retrieves the collection of message filters currently applied.
+            </summary>
+            <returns>A list of <see cref="T:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter"/> objects representing the active message filters. The list may be empty
+            if no filters are applied.</returns>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter">
+            <summary>
+            Used to handle control messages sent from PLC to Unity client instances via MQTT
+            and control requests sent from Unity client instances to Unity server instance via MQTT.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter.PartParentName">
+            <summary>
+            Part's parent name = Unity GameObject associated with the monitored item.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter.ControlPropertyName">
+            <summary>
+            Name of the control property within the Part's parent to update.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter.EventType">
+            <summary>
+            <see cref="P:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter.EventType"/> raised when given filter is applied.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter.#ctor(System.String,Expi40.Core.EventManagement.EventType,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the MessageFilter class with the specified filter value, part parent name, and
+            control property name.
+            </summary>
+            <param name="filterValue">The value to use for filtering messages' JSON content.</param>
+            <param name="eventType">The type of event raised when given filter is applied.</param>
+            <param name="partParentName">The name of the parent part to which the filter applies. Can be empty in case of <see cref="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected"/>.</param>
+            <param name="controlPropertyName">The name of the control property that the filter targets. Can be empty in case of <see cref="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected"/>.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="partParentName"/> or <paramref name="controlPropertyName"/> is null or empty and
+            <paramref name="eventType"/> is not <see cref="F:Expi40.Core.EventManagement.EventType.OnNewPhysicalProductDetected"/>.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilterBase">
+            <summary>
+            Provides a base class for implementing message filters that select data using a JSON path expression.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilterBase.FilterValue">
+            <summary>
+            Defines the filter value used to select data based on a JSON path expression.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilterBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the MessageFilterBase class with the specified filter value.
+            </summary>
+            <param name="filterValue">The value used to initialize the filter. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="filterValue"/> is null or empty.</exception>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilterBase.CompareAndUpdate(System.Object)">
+            <summary>
+            Compares the specified value to the previously stored value and updates the stored value if they differ.
+            </summary>
+            <param name="newValue">The value to compare with the previously stored value. Can be null.</param>
+            <returns>true if the stored value was updated; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="newValue"/> is null.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Items.Sub.Filters.NewProductTopicFilter">
+            <summary>
+            Represents a filter for new product instantiation topic messages.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Items.Sub.Filters.NewProductTopicFilter.Topic">
+            <summary>
+            Topic used to receive messages associated with new product instantiation requests.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.Filters.NewProductTopicFilter.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the NewProductTopicFilter class with the specified topic and filter value.
+            </summary>
+            <param name="topic">The topic to which the filter will be applied. Cannot be null or empty.</param>
+            <param name="filterValue">The value used to filter messages for the specified topic. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="topic"/> or <paramref name="filterValue"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Items.Sub.JsonMessageHandler">
+            <summary>
+            Provides utility methods for extracting values from JSON tokens using path expressions.
+            </summary>
+        </member>
+        <member name="F:Expi40.OpcUaPubSub.Items.Sub.JsonMessageHandler.MessageFilterPathRegex">
+            <summary>
+            Represents a compiled regular expression used to parse message filter path segments.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.JsonMessageHandler.GetValueByPath(Newtonsoft.Json.Linq.JToken,System.String)">
+            <summary>
+            Retrieves a JSON token from the specified root token by traversing the path defined in the message filter
+            path string.
+            </summary>
+            <remarks>The path syntax supports property names (including quoted names) and array indices,
+            similar to JSONPath notation. Each segment of the path is resolved in order, and an exception is thrown if
+            any segment cannot be found.</remarks>
+            <param name="root">The root <see cref="T:Newtonsoft.Json.Linq.JToken"/> from which to begin path traversal. Cannot be null.</param>
+            <param name="messageFilterPath">A string representing the path to the desired token, using property names and array indices. Cannot be null
+            or empty.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.Linq.JToken"/> located at the specified path within the root token.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="root"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="messageFilterPath"/> is null, empty, or consists only of white-space characters.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the specified path cannot be fully resolved within the root token, such as when a property or
+            array index does not exist.</exception>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Items.Sub.JsonMessageHandler.TryGetAndUpdate``1(Newtonsoft.Json.Linq.JToken,Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilterBase,``0@)">
+            <summary>
+            Attempts to retrieve a value of type T from the specified JSON token using the provided filter, and updates
+            the filter state if the value matches.
+            </summary>
+            <typeparam name="T">The type of the value to retrieve from the JSON token.</typeparam>
+            <param name="json">The JSON token to search for the value. Cannot be null.</param>
+            <param name="filter">The filter that specifies the path and comparison logic for extracting and validating the value. Cannot be null.</param>
+            <param name="value">When this method returns, contains the value of type T if the operation succeeds; otherwise, the default
+            value for type T.</param>
+            <returns>true if a matching value is found and the filter is updated; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="json"/> or <paramref name="filter"/> is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if a matching token is found but its value is null.</exception>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Publisher">
+            <summary>
+            Implementation of <see cref="T:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.IPublisher"/> that manages MQTT connections and publishes OPC UA structured messages.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Publisher.IsConfigured">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Publisher.IsConnected">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.CreatePublisherConfiguration(Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.RegisterPublishedProperty(System.String,System.String,System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.RegisterNewVirtualProductInstantiatedPublishedProperty(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.RegisterInstantiateNewVirtualProductRequestPublishedProperty(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.Connect">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.Disconnect">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.WritePublishedDataItem(System.String,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.WriteNewVirtualProductInstantiated">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.WriteInstantiateNewVirtualProductRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.CreateWriterGroup(System.String)">
+            <summary>
+            Creates and adds a new writer group for the specified topic to the publisher configuration.
+            </summary>
+            <param name="topic">The name of the topic for which to create the writer group. This value is used to set the writer group's
+            name and queue.</param>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.CreateDataSetWriter(System.String)">
+            <summary>
+            Creates and adds a new DataSetWriter to the writer group associated with the specified topic.
+            </summary>
+            <param name="topic">The name of the topic for which to create the DataSetWriter. This value is used to identify the writer group
+            and configure the DataSetWriter settings.</param>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.CreatePublishedDataSet(System.String,Opc.Ua.FieldMetaDataCollection)">
+            <summary>
+            Creates and adds a new published data set for the specified topic using the provided field metadata.
+            </summary>
+            <param name="topic">The name of the topic for which the published data set is created. This value is used as the data set name
+            and must match the corresponding DataSetWriter.DataSetName.</param>
+            <param name="fields">A collection of field metadata that defines the structure and fields of the published data set. Cannot be
+            null.</param>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.InitializeValues">
+            <summary>
+            Initializes all published properties with their configured initial values for each topic.
+            </summary>
+            <remarks>This method should be called only after establishing a connection via <see cref="M:Opc.Ua.PubSub.UaPubSubApplication.Create(Opc.Ua.PubSubConfigurationDataType,Opc.Ua.PubSub.IUaPubSubDataStore)"/>.
+            It assigns the initial value to each published property, ensuring that all topics start with their intended state.</remarks>
+            <exception cref="T:Expi40.Core.Exceptions.Publisher.PublisherNotConnectedException">Thrown if the publisher is not connected when the method is called.</exception>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.ValidateMqttConnection(Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes)">
+            <summary>
+            Attempts to establish a connection to an MQTT broker using the specified connection attributes to validate
+            the configuration.
+            </summary>
+            <param name="connectionAttributes">The connection parameters used to establish the MQTT connection, including broker address, port, username,
+            and password. Cannot be null.</param>
+            <returns>A task that represents the asynchronous validation operation.</returns>
+            <exception cref="T:MQTTnet.Exceptions.MqttConfigurationException">Thrown if the connection to the MQTT broker cannot be established with the provided parameters.</exception>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.CreateFieldMetaData(System.String,System.String)">
+            <summary>
+            Creates a new instance of the FieldMetaData class using the specified field name and data type.
+            </summary>
+            <param name="name">The name of the field to include in the metadata. Cannot be null.</param>
+            <param name="type">The data type of the field, specified as a string. Must correspond to a supported OPC UA data type.</param>
+            <returns>A FieldMetaData object initialized with the specified name and data type.</returns>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Publisher.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Expi40.OpcUaPubSub.Subscriber">
+            <summary>
+            Implementation of <see cref="T:Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ISubscriber"/> that manages MQTT subscriptions and handles incoming messages.
+            </summary>
+        </member>
+        <member name="P:Expi40.OpcUaPubSub.Subscriber.IsConnected">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.#ctor(Expi40.Core.EventManagement.IEventManager,Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc cref="T:Expi40.OpcUaPubSub.Subscriber"/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.Connect(Expi40.Core.CommunicationInterfaces.OpcUaPubSub.ConnectionAttributes)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.Disconnect">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToPlcTopic(System.String,System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToClientControlTopic(System.String,System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToNewPhysicalProductTopic(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToNewVirtualProductInstantiatedTopic(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToInstantiateNewVirtualProductRequestTopic(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.SubscribeToTopicAsync(System.String)">
+            <summary>
+            Subscribes the MQTT client to the specified topic using Quality of Service level 1 (At least once).
+            </summary>
+            <param name="topic">The name of the MQTT topic to subscribe to. Cannot be null or empty.</param>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.HandleMessage(MQTTnet.Client.MqttApplicationMessageReceivedEventArgs)">
+            <summary>
+            Handles incoming MQTT messages and triggers appropriate events based on the topic and message content.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.HandleVirtualLineValueChange(Newtonsoft.Json.Linq.JToken,Expi40.OpcUaPubSub.Items.Sub.Filters.MessageFilter)">
+            <summary>
+            Handles value changes for virtual line originated from PLC or client control topics.
+            </summary>
+        </member>
+        <member name="M:Expi40.OpcUaPubSub.Subscriber.Dispose">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

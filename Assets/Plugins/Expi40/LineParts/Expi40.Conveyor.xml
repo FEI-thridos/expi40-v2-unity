@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.Conveyor</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.Conveyor.Belt">
+            <summary>
+            Control behavior for conveyor belt.
+            </summary>
+        </member>
+        <member name="P:Expi40.Conveyor.Belt.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Conveyor.Belt.Initialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Belt.InjectNotificationManager(Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Belt.FinalizeInitialization">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Belt.FixedUpdate">
+            <summary>
+            Performs physics-based updates for the conveyor belt and its products at fixed time intervals.
+            </summary>
+        </member>
+        <member name="M:Expi40.Conveyor.Belt.OnCollisionEnter(UnityEngine.Collision)">
+            <summary>
+            Adds product to the list of products on the belt when a collision is detected.
+            </summary>
+            <param name="collision">Item that collided with the belt.</param>
+        </member>
+        <member name="M:Expi40.Conveyor.Belt.OnCollisionExit(UnityEngine.Collision)">
+            <summary>
+            Removes product from the list of products on the belt when the collision ends.
+            </summary>
+            <param name="collision">Item that stopped colliding with the belt.</param>
+        </member>
+        <member name="T:Expi40.Conveyor.Parent">
+            <summary>
+            Instance of a line part parent.
+            </summary>
+        </member>
+        <member name="P:Expi40.Conveyor.Parent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Conveyor.Parent.IsOnlyVirtual">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Conveyor.Parent.IsSensor">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Conveyor.Parent.TimeSeriesQuery">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.SetIsOnlyVirtual(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.SetIsSensor(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.SetTimeSeriesQuery(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.AddControlProperty(Expi40.Core.LinePart.Properties.ControlProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.AddAdditionalProperty(Expi40.Core.LinePart.Properties.AdditionalProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.ContainsControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.ContainsAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.GetControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Conveyor.Parent.GetAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

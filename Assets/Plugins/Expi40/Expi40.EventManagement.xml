@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.EventManagement</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.EventManagement.EventManager">
+            <summary>
+            Implementation of <see cref="T:Expi40.Core.EventManagement.IEventManager"/> that manages event subscriptions and notifications.
+            </summary>
+        </member>
+        <member name="M:Expi40.EventManagement.EventManager.StartListening``1(Expi40.Core.EventManagement.EventType,System.Action{``0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.EventManagement.EventManager.StopListening``1(Expi40.Core.EventManagement.EventType,System.Action{``0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.EventManagement.EventManager.TriggerEvent``1(Expi40.Core.EventManagement.EventType,``0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.EventManagement.EventManager.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Expi40.EventManagement.EventMessages.OnValueOnPhysicalLineChangedMessage">
+            <summary>
+            Instance of <see cref="T:Expi40.Core.EventManagement.EventMessages.IOnValueOnPhysicalLineChangedMessage"/> indicating that the value in a physical line's production
+            process has changed.
+            </summary>
+        </member>
+        <member name="P:Expi40.EventManagement.EventMessages.OnValueOnPhysicalLineChangedMessage.PartParentName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.EventManagement.EventMessages.OnValueOnPhysicalLineChangedMessage.ControlPropertyName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.EventManagement.EventMessages.OnValueOnPhysicalLineChangedMessage.Value">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.EventManagement.EventMessages.OnValueOnPhysicalLineChangedMessage.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the OnValueOnPhysicalLineChangedMessage class with the specified game object
+            name, control property name, and value.
+            </summary>
+            <param name="gameObjectName">The name of the game object associated with the virtual line change. Cannot be null or empty.</param>
+            <param name="controlPropertyName">The name of the control property that has changed. Cannot be null or empty.</param>
+            <param name="value">The new value assigned to the control property. May be null if the property supports null values. Cannot be null.</param>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="gameObjectName"/> or <paramref name="controlPropertyName"/> is null or empty.</exception>
+        </member>
+        <member name="T:Expi40.EventManagement.EventMessages.OnValueOnVirtualLineChangedMessage">
+            <summary>
+            Instance of <see cref="T:Expi40.Core.EventManagement.EventMessages.IOnValueOnVirtualLineChangedMessage"/> indicating that the value in a virtual line's production
+            has changed.
+            </summary>
+        </member>
+        <member name="P:Expi40.EventManagement.EventMessages.OnValueOnVirtualLineChangedMessage.DataWriteAddress">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.EventManagement.EventMessages.OnValueOnVirtualLineChangedMessage.Value">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.EventManagement.EventMessages.OnValueOnVirtualLineChangedMessage.#ctor(Expi40.Core.LinePart.Properties.InterfaceAddress,System.Object)">
+            <summary>
+            Initializes a new instance of the OnValueOnVirtualLineChangedMessage class with the specified data write
+            address and value.
+            </summary>
+            <param name="dataWriteAddress">Defines write address for property using OPC UA Client/Server or OPC UA PubSub interface where the value change is to be written. Cannot be null.</param>
+            <param name="value">The new value to be written to the specified virtual line address. Cannot be null.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="dataWriteAddress"/> or <paramref name="value"/> is null.</exception>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.Stopper</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.Stopper.Button">
+            <summary>
+            Control behavior for stopper button.
+            </summary>
+        </member>
+        <member name="P:Expi40.Stopper.Button.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Stopper.Button.Initialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Button.InjectEventManager(Expi40.Core.EventManagement.IEventManager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Button.InjectNotificationManager(Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Button.FinalizeInitialization">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Button.OnTriggerEnter(UnityEngine.Collider)">
+            <summary>
+            Defines behavior when a collider enters the stopper button's trigger zone.
+            </summary>
+            <param name="collider">Item collided with the stopper button.</param>
+        </member>
+        <member name="M:Expi40.Stopper.Button.OnTriggerExit(UnityEngine.Collider)">
+            <summary>
+            Defines behavior when a collider exits the stopper button's trigger zone.
+            </summary>
+            <param name="collider">Item exited the stopper button.</param>
+        </member>
+        <member name="T:Expi40.Stopper.Parent">
+            <summary>
+            Instance of a line part parent.
+            </summary>
+        </member>
+        <member name="P:Expi40.Stopper.Parent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Stopper.Parent.IsOnlyVirtual">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Stopper.Parent.IsSensor">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Stopper.Parent.TimeSeriesQuery">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.SetIsOnlyVirtual(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.SetIsSensor(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.SetTimeSeriesQuery(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.AddControlProperty(Expi40.Core.LinePart.Properties.ControlProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.AddAdditionalProperty(Expi40.Core.LinePart.Properties.AdditionalProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.ContainsControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.ContainsAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.GetControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Stopper.Parent.GetAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

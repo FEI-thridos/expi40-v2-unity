@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.Mixer</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.Mixer.Parent">
+            <summary>
+            Instance of a line part parent.
+            </summary>
+        </member>
+        <member name="P:Expi40.Mixer.Parent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Mixer.Parent.IsOnlyVirtual">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Mixer.Parent.IsSensor">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Mixer.Parent.TimeSeriesQuery">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.SetIsOnlyVirtual(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.SetIsSensor(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.SetTimeSeriesQuery(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.AddControlProperty(Expi40.Core.LinePart.Properties.ControlProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.AddAdditionalProperty(Expi40.Core.LinePart.Properties.AdditionalProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.ContainsControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.ContainsAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.GetControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Parent.GetAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Expi40.Mixer.Shovel">
+            <summary>
+            Control behavior for mixer shovel.
+            </summary>
+        </member>
+        <member name="P:Expi40.Mixer.Shovel.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Mixer.Shovel.Initialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Shovel.InjectNotificationManager(Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Shovel.FinalizeInitialization">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Mixer.Shovel.FixedUpdate">
+            <summary>
+            Performs updates for the shovel at fixed time intervals.
+            </summary>
+        </member>
+    </members>
+</doc>

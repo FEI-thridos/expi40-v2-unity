@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expi40.Slider</name>
+    </assembly>
+    <members>
+        <member name="T:Expi40.Slider.Direction">
+            <summary>
+            Describes slider pusher movement direction.
+            </summary>
+        </member>
+        <member name="T:Expi40.Slider.Parent">
+            <summary>
+            Instance of a line part parent.
+            </summary>
+        </member>
+        <member name="P:Expi40.Slider.Parent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Slider.Parent.IsOnlyVirtual">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Slider.Parent.IsSensor">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Slider.Parent.TimeSeriesQuery">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.SetIsOnlyVirtual(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.SetIsSensor(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.SetTimeSeriesQuery(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.AddControlProperty(Expi40.Core.LinePart.Properties.ControlProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.AddAdditionalProperty(Expi40.Core.LinePart.Properties.AdditionalProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.ContainsControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.ContainsAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.GetControlProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Parent.GetAdditionalProperty(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Expi40.Slider.Pusher">
+            <summary>
+            Control behavior for slider pusher.
+            </summary>
+        </member>
+        <member name="P:Expi40.Slider.Pusher.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Expi40.Slider.Pusher.Initialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Pusher.InjectNotificationManager(Expi40.Core.NotificationManagement.INotificationManager)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Pusher.FinalizeInitialization">
+            <inheritdoc/>
+        </member>
+        <member name="M:Expi40.Slider.Pusher.FixedUpdate">
+            <summary>
+            Performs updates for the pusher at fixed time intervals.
+            </summary>
+        </member>
+        <member name="M:Expi40.Slider.Pusher.ResetToStartPosition(UnityEngine.Rigidbody)">
+            <summary>
+            Resets the pusher to its start position, when moved backward.
+            </summary>
+        </member>
+    </members>
+</doc>
